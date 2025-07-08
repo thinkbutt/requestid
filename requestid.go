@@ -4,14 +4,14 @@ import (
 	"context"
 )
 
-type RequestIDKey struct{}
+type IDKey struct{}
 
 func IntoContext(ctx context.Context, id string) context.Context {
-	return context.WithValue(ctx, RequestIDKey{}, id)
+	return context.WithValue(ctx, IDKey{}, id)
 }
 
 func FromContext(ctx context.Context) string {
-	if id, ok := ctx.Value(RequestIDKey{}).(string); ok {
+	if id, ok := ctx.Value(IDKey{}).(string); ok {
 		return id
 	}
 	return ""
