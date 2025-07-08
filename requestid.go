@@ -6,6 +6,8 @@ import (
 
 type IDKey struct{}
 
+const Header = "X-Request-Id"
+
 func IntoContext(ctx context.Context, id string) context.Context {
 	return context.WithValue(ctx, IDKey{}, id)
 }
