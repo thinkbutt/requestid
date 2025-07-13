@@ -1,3 +1,3 @@
-module github.com/leighlondon/requestid
+module github.com/thinkbutt/requestid
 
 go 1.24
